@@ -1,3 +1,10 @@
+# Don't track the build directory.
+build/
+
+###################################################
+# GitHub's generated content is below here
+###################################################
+
 # Prerequisites
 *.d
 
