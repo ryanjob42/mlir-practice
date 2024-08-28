@@ -8,7 +8,7 @@ module purge
 module load gcc/7.4.0
 
 # Create the build directory.
-mkdir build
+mkdir -p build
 cd build
 
 # Configure the CMake build.
@@ -16,8 +16,8 @@ cd build
 # Also note: instead of requiring that LLVM/MLIR gets installed,
 # we're referencing its build directory.
 cmake -G Ninja .. \
-	-DMLIR_DIR=$LLVM_BUILD_DIR/lib/cmake/mlir \
-	-DLLVM_EXTERNAL_LIT=$LLVM_BUILD_DIR/bin/llvm-lit
+    -DMLIR_DIR=$LLVM_BUILD_DIR/lib/cmake/mlir \
+    -DLLVM_EXTERNAL_LIT=$LLVM_BUILD_DIR/bin/llvm-lit
 
 # Run the CMake build.
 cmake --build . --target check-standalone
