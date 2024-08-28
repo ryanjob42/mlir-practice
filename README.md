@@ -1,6 +1,11 @@
 # MLIR Practice
 A practice repo for creating a standalone MLIR dialect.
 
+This repo is based on MLIR's example of a standalone project.
+See the link below.
+
+https://github.com/llvm/llvm-project/tree/main/mlir/examples/standalone
+
 Parts of this repo were designed for the computer science department machines
 at Colorado State University (for my own convenience).
 If you're trying to use this elsewhere, some very minor changes may be needed.
