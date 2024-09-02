@@ -1,6 +1,9 @@
 # Don't track the build directory.
 build/
 
+# VSCode's settings.
+.vscode/
+
 ###################################################
 # GitHub's generated content is below here
 ###################################################
