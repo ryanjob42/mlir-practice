@@ -51,4 +51,20 @@ def Standalone_CustomType : Standalone_Type<"Custom", "custom"> {
     let assemblyFormat = "`<` $value `>`";
 }
 
+// I've created this "FixedPoint" type, which represents a fixed-point value
+// in an arbitrary base numbering system. It requires two parameters:
+// the base system to use, and the number of digits after the radix to keep.
+def Standalone_FixedPointType : Standalone_Type<"FixedPoint", "fixed"> {
+    let summary = "Standalone fixed-point type";
+    let description = "Fixed-point type in standalone dialect";
+
+    // The base and number of digits are each an "int".
+    let parameters = (ins
+        "int":$base,
+        "int":$digits
+    );
+
+    let assemblyFormat = "`<` $base `,` $digits `>`";
+}
+
 #endif // STANDALONE_TYPES
